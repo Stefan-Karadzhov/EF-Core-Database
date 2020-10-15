@@ -1,0 +1,12 @@
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\bin\Debug\netcoreapp2.0\Cinema_Database.deps.json
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\bin\Debug\netcoreapp2.0\Cinema_Database.runtimeconfig.json
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\bin\Debug\netcoreapp2.0\Cinema_Database.runtimeconfig.dev.json
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\bin\Debug\netcoreapp2.0\Cinema_Database.dll
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\bin\Debug\netcoreapp2.0\Cinema_Database.pdb
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.AssemblyInfo.cs
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.dll
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.pdb
+C:\Users\admin\source\repos\Cinema_Database\Cinema_Database\obj\Debug\netcoreapp2.0\Cinema_Database.genruntimeconfig.cache
