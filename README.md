@@ -1,2 +1,2 @@
 # EF-Core-Database
-Inserting data with JSON and XML from files. 
+Inserting data from JSON and XML files. 
