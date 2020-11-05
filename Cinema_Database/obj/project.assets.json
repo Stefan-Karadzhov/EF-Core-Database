@@ -5336,11 +5336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Cinema_Database\\Cinema_Database\\Cinema_Database.csproj",
+      "projectUniqueName": "G:\\Repository\\EF-Core-Database\\Cinema_Database\\Cinema_Database.csproj",
       "projectName": "Cinema_Database",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\Cinema_Database\\Cinema_Database\\Cinema_Database.csproj",
+      "projectPath": "G:\\Repository\\EF-Core-Database\\Cinema_Database\\Cinema_Database.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\Cinema_Database\\Cinema_Database\\obj\\",
+      "outputPath": "G:\\Repository\\EF-Core-Database\\Cinema_Database\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

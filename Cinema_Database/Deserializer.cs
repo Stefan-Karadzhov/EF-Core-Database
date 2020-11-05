@@ -49,7 +49,7 @@ namespace Cinema_Database
             db.SaveChanges();
         }
 
-        public void DataImport(string inputJson,DbCimenaContext db)
+        public void DataImportHallAndSeats(string inputJson,DbCimenaContext db)
         {
             var ReadedFile = File.ReadAllText(inputJson);
             var jsonFile = JsonConvert.DeserializeObject<HallDTO[]>(ReadedFile);
@@ -83,7 +83,7 @@ namespace Cinema_Database
            
         }
 
-        public void DataImportXml(string inputXML, DbCimenaContext db)
+        public void DataImportProjectionsXml(string inputXML, DbCimenaContext db)
         {
             var serializer = new XmlSerializer(typeof(ProjectionDTO[]),new XmlRootAttribute("Projections"));
             var objects = (ProjectionDTO[])serializer.Deserialize(new StreamReader(inputXML));
@@ -125,7 +125,9 @@ namespace Cinema_Database
                     };
                     db.Customers.Add(customer);
                     db.SaveChanges();
-                    ImportTickets(db, customer.Id,dto.Tickets);
+                    ImportTickets(db, customer.Id, dto.Tickets);
+                   
+                    
                 }
             }
 
@@ -136,7 +138,7 @@ namespace Cinema_Database
         {
             foreach (var ticketObj in tickets)
             {
-                if (IsValid(ticketObj) && IsValidProjectionId(db,ticketObj.ProjectionsId))
+                if (IsValid(ticketObj) && IsValidProjectionId(db,ticketObj.ProjectionsId)&& IsValidCustomerId(db, id))
                 {
                     var ticket = new Tickets
                     {
@@ -145,15 +147,21 @@ namespace Cinema_Database
                         CustomerId = id,
                     };
                     db.Tickets.Add(ticket);
+                    db.SaveChanges();
                 }
                 
             }
-            db.SaveChanges();
+          
+
         }
 
         private bool IsValidProjectionId(DbCimenaContext context, int projectionsId)
         {
             return context.Projections.Any(p => p.Id == projectionsId);
+        }
+        private bool IsValidCustomerId(DbCimenaContext context, int customerId)
+        {
+            return context.Customers.Any(c => c.Id == customerId);
         }
 
         private bool IsValidMovieId(DbCimenaContext context, int MovieId)

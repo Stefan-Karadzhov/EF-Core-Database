@@ -21,7 +21,7 @@ namespace Cinema_Database.DbCinemaContext
 
         protected  override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionString.Connection);    
+            optionsBuilder.UseSqlServer("Server =.;Database = CinemaDB;Integrated security =true");    
         }
         
         protected  override void OnModelCreating(ModelBuilder modelBuilder)

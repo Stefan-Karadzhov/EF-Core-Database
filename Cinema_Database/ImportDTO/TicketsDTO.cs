@@ -12,5 +12,10 @@ namespace Cinema_Database.ImportDTO
         [Required]
         [XmlElement("ProjectionId")]
         public int ProjectionsId { get; set; }
+
+
+        [Required]
+        [XmlElement("CustomerId")]
+        public int CustomerId { get; set; }
     }
 }

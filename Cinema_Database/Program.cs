@@ -17,16 +17,20 @@ namespace Cinema_Database
             
             using (var db = new DbCimenaContext())
             {
-              
-                db.Database.Migrate();
-
+                db.Database.EnsureDeleted();
+                db.Database.EnsureCreated();
+               // db.Database.Migrate();
+                
                 var JsonDeserializer = new Deserializer();
-                JsonDeserializer.DataImport(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/halls-seats.json",db);
-                var XmlDeserializer = new Deserializer();
-                XmlDeserializer.DataImportXml(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/projections.xml",db);
                 JsonDeserializer.DataImportMovies(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/movies.json", db);
+                JsonDeserializer.DataImportHallAndSeats(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/halls-seats.json",db);
+                var XmlDeserializer = new Deserializer();
+                
+                XmlDeserializer.DataImportProjectionsXml(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/projections.xml", db);
                 XmlDeserializer.DataImportXmlTickets(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/customers-tickets.xml", db);
-
+                
+                var jsonSerializer = new Serializer();
+                jsonSerializer.JsonMovieSerializer(db);
             }
           
         }
