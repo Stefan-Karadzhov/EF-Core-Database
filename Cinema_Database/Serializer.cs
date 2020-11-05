@@ -33,7 +33,7 @@ namespace Cinema_Database
                 })
                 .ToList();
                 var serializer = JsonConvert.SerializeObject(movies,Formatting.Indented);
-            File.WriteAllText(@"G:\Repository\EF-Core-Database\Cinema_Database/TestSerializer.json", serializer);
+            File.WriteAllText(@"G:\Repository\EF-Core-Database\Cinema_Database/Serializer-Movie.json", serializer);
         }
     }
 }
