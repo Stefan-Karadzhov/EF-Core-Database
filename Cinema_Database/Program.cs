@@ -17,9 +17,9 @@ namespace Cinema_Database
             
             using (var db = new DbCimenaContext())
             {
-                db.Database.EnsureDeleted();
-                db.Database.EnsureCreated();
-               // db.Database.Migrate();
+               // db.Database.EnsureDeleted();
+               // db.Database.EnsureCreated();
+                db.Database.Migrate();
                 
                 var JsonDeserializer = new Deserializer();
                 JsonDeserializer.DataImportMovies(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/Import/movies.json", db);
@@ -29,8 +29,9 @@ namespace Cinema_Database
                 XmlDeserializer.DataImportProjectionsXml(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/Import/projections.xml", db);
                 XmlDeserializer.DataImportXmlTickets(@"C:\Users\admin\source\repos\Cinema_Database\Cinema_Database/Import/customers-tickets.xml", db);
                 
-                var jsonSerializer = new Serializer();
-                jsonSerializer.JsonMovieSerializer(db);
+                var Serializer = new Serializer();
+                Serializer.JsonMovieSerializer(db);
+                Serializer.XmlCustomerSerializer(db, 20);
             }
           
         }
